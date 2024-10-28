@@ -1,0 +1,22 @@
+html{
+	font-size: 10px;
+}
+div{
+	width: 500px;
+	height: 300px;
+	margin: 10px auto;
+	background: linear-gradient(to left top,rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.2) 30%,rgba(0, 0, 0, 0));
+	background-color: red;
+	border-radius: 12px;
+
+	/** 设置字体大小为根元素字体的1.8倍 */
+	font-size: 1.8rem;
+	line-height: 278px;
+	color: white;
+	text-align: center;
+	text-shadow: 2px 0px 5px hsl(0, 0%, 0%),
+               2px 0px 5px hsl(0, 0%, 0%);
+  	box-shadow: 3px 3px 1px hsl(0, 0%, 0%),
+              inset 1px 1px 1px hsla(0, 0%, 100%, 0.5),
+              inset 1px 1px 1px hsla(0, 0%, 0%, 0.5);
+}
