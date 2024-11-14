@@ -1,96 +1,107 @@
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Fundamental CSS comprehension</title>
-    <style type="text/css">
-      html {
-        font-family: Helvetica, Arial, sans-serif;
-        font-size: 10px;
-      }
 
-      h2 {
-        font-size: 2rem;
-      }
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Simple grid</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-      ul,
-      ol,
-      dl,
-      p {
-        font-size: 1.5rem;
-      }
+    body {
+      width: 980px;
+      margin: 0 auto;
+    }
 
-      li,
-      p {
-        line-height: 1.5;
-      }
+    .wrapper {
+      padding-right: 20px;
+    }
 
-      dd,
-      dt {
-        line-height: 1.5;
-      }
+    .row {
+      clear: both;
+    }
 
-      dt {
-        font-weight: bold;
-      }
-    </style>
-  </head>
-  <body>
+    .col {
+      float: left;
+      margin-left: 20px;
+      width: 60px;
+      background: rgb(255, 150, 150);
+    }
 
-    <h2>Shopping (unordered) list</h2>
+    /* Two column widths (120px) plus one gutter width (20px) */
+    .col.span2 {
+      width: 140px;
+    }
 
-<p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
-</p>
+    /* Three column widths (180px) plus two gutter widths (40px) */
+    .col.span3 {
+      width: 220px;
+    }
 
-<ul>
-  <li>Hummus</li>
-  <li>Pita</li>
-  <li>Green salad</li>
-  <li>Halloumi</li>
-</ul>
+    /* And so on... */
+    .col.span4 {
+      width: 300px;
+    }
 
-<h2>Recipe (ordered) list</h2>
+    .col.span5 {
+      width: 380px;
+    }
 
-<p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
-</p>
+    .col.span6 {
+      width: 460px;
+    }
 
-<ol>
-  <li>Toast pita, leave to cool, then slice down the edge.</li>
-  <li>
-    Fry the halloumi in a shallow, non-stick pan, until browned on both sides.
-  </li>
-  <li>Wash and chop the salad.</li>
-  <li>Fill pita with salad, hummus, and fried halloumi.</li>
-</ol>
+    .col.span7 {
+      width: 540px;
+    }
 
-<h2>Ingredient description list</h2>
+    .col.span8 {
+      width: 620px;
+    }
 
-<p>
-  Paragraph for reference, paragraph for reference, paragraph for reference,
-  paragraph for reference, paragraph for reference, paragraph for reference.
-</p>
+    .col.span9 {
+      width: 700px;
+    }
 
-<dl>
-  <dt>Hummus</dt>
-  <dd>
-    A thick dip/sauce generally made from chick peas blended with tahini, lemon
-    juice, salt, garlic, and other ingredients.
-  </dd>
-  <dt>Pita</dt>
-  <dd>A soft, slightly leavened flatbread.</dd>
-  <dt>Halloumi</dt>
-  <dd>
-    A semi-hard, unripened, brined cheese with a higher-than-usual melting
-    point, usually made from goat/sheep milk.
-  </dd>
-  <dt>Green salad</dt>
-  <dd>That green healthy stuff that many of us just use to garnish kebabs.</dd>
-</dl>
+    .col.span10 {
+      width: 780px;
+    }
 
-  </body>
+    .col.span11 {
+      width: 860px;
+    }
+
+    .col.span12 {
+      width: 940px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="row">
+      <div class="col">1</div>
+      <div class="col">2</div>
+      <div class="col">3</div>
+      <div class="col">4</div>
+      <div class="col">5</div>
+      <div class="col">6</div>
+      <div class="col">7</div>
+      <div class="col">8</div>
+      <div class="col">9</div>
+      <div class="col">10</div>
+      <div class="col">11</div>
+      <div class="col">12</div>
+    </div>
+    <div class="row">
+      <div class="col span1">13</div>
+      <div class="col span6">14</div>
+      <div class="col span3">15</div>
+      <div class="col span2">16</div>
+    </div>
+  </div>
+</body>
+
 </html>
