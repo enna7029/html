@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+    <button id="set-alarm">Set alarm</button>
+    <div id="output"></div>
+
+    <script>
+        const output = document.querySelector("#output");
+        const button = document.querySelector("#set-alarm");
+
+        function setAlarm() {
+            window.setTimeout(() => {
+                output.textContent = "Wake up!";
+            }, 1000);
+        }
+
+        const myObj = {
+            a: 1,
+            b: { c: 2 },
+        };
+        function printMe(obj) {
+            console.log(obj.b.c);
+        }
+        printMe(myObj);
+
+
+        const myObj = {
+            a: 1,
+            b: { c: 2 },
+        };
+        function printMe(obj) {
+            console.log(obj.b.c);
+        }
+        printMe(myObj);
+
+        button.addEventListener("click", setAlarm);
+    </script>
+</body>
+
+</html>

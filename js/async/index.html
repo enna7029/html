@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Object-oriented JavaScript example</title>
+</head>
+
+<body>
+    <button id="xhr">点击发起请求</button>
+    <button id="reload">重载</button>
+
+    <pre readonly class="event-log"></pre>
+
+    <script>
+        const log = document.querySelector(".event-log");
+
+        document.querySelector("#xhr").addEventListener("click", () => {
+            log.textContent = "";
+            const xhr = new XMLHttpRequest();
+            xhr.addEventListener("loadend", () => {
+                log.textContent = `${log.textContent}完成!状态码:${xhr.status}`;
+            });
+            xhr.open(
+                "GET",
+                "https://raw.githubusercontent.com/mdn/content/main/files/en-us/_wikihistory.json"
+            );
+            xhr.send();
+            log.textContent = `${log.textContent}请求已发送\n`;
+        });
+
+        document.querySelector("#reload").addEventListener("click",()=>{
+            log.textContent="";
+            document.location.reload();
+        });
+    </script>
+</body>
+
+</html>
